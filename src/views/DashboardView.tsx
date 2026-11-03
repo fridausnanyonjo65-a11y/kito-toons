@@ -47,7 +47,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   if (!currentUser) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-24 text-center">
-        <div className="w-16 h-16 rounded-3xl bg-[#2A0201] border-2 border-[#FFA175] flex items-center justify-center mx-auto mb-4">
+        <div className="w-16 h-16 rounded-3xl bg-[#190222] border-2 border-[#FFA175] flex items-center justify-center mx-auto mb-4">
           <User className="w-8 h-8 text-[#FFA175]" />
         </div>
         <h2 className="font-display text-2xl font-bold text-[#FFF3E9]">Sign In to View Dashboard</h2>
@@ -86,14 +86,14 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
       {/* User Profile Header Card */}
-      <div className="rounded-3xl bg-[#2A0201] border-2 border-[#FFA175]/50 p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+      <div className="rounded-3xl bg-[#23052D] border-2 border-[#FFA175]/50 p-6 sm:p-8 shadow-2xl relative overflow-hidden">
         {/* Soft decorative background glow */}
         <div className="absolute top-0 right-0 w-80 h-80 bg-[#FFA175]/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 relative z-10">
           {/* Avatar */}
           <div className="relative">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl overflow-hidden border-3 border-[#FFA175] bg-[#1D0100] shadow-xl">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl overflow-hidden border-3 border-[#FFA175] bg-[#190222] shadow-xl">
               <img
                 src={userProfile?.photoURL || '/src/assets/images/kito_mascot_avatar_1793709129479.jpg'}
                 alt={userProfile?.displayName || 'User'}
@@ -171,7 +171,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                   type="text"
                   value={displayName}
                   onChange={(e) => setDisplayName(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#1D0100] border border-[#FFA175]/40 text-xs text-[#FFF3E9] focus:border-[#FFA175] outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#190222] border border-[#FFA175]/40 text-xs text-[#FFF3E9] focus:border-[#FFA175] outline-none"
                 />
               </div>
 
@@ -180,7 +180,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 <select
                   value={favoriteCategory}
                   onChange={(e) => setFavoriteCategory(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#1D0100] border border-[#FFA175]/40 text-xs text-[#FFF3E9] focus:border-[#FFA175] outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#190222] border border-[#FFA175]/40 text-xs text-[#FFF3E9] focus:border-[#FFA175] outline-none"
                 >
                   <option value="Adventure">Adventure</option>
                   <option value="Comedy">Comedy</option>
@@ -198,7 +198,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                   rows={2}
                   value={bio}
                   onChange={(e) => setBio(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#1D0100] border border-[#FFA175]/40 text-xs text-[#FFF3E9] focus:border-[#FFA175] outline-none resize-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#190222] border border-[#FFA175]/40 text-xs text-[#FFF3E9] focus:border-[#FFA175] outline-none resize-none"
                 />
               </div>
             </div>
@@ -259,7 +259,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         {activeTab === 'favorites' && (
           <div>
             {favorites.length === 0 ? (
-              <div className="p-12 text-center rounded-3xl bg-[#2A0201]/60 border border-[#FFA175]/30 space-y-3">
+              <div className="p-12 text-center rounded-3xl bg-[#190222]/80 border border-[#FFA175]/30 space-y-3">
                 <Heart className="w-12 h-12 text-[#FFA175]/50 mx-auto" />
                 <h3 className="font-display font-black text-lg text-[#FFF3E9]">No Favorite Movies Saved Yet</h3>
                 <p className="text-xs text-[#FFF3E9]/70 max-w-sm mx-auto">
@@ -279,7 +279,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                   return (
                     <div
                       key={fav.id}
-                      className="group bg-[#2A0201] rounded-2xl overflow-hidden border-2 border-[#FFA175]/30 hover:border-[#FFA175] shadow-lg flex flex-col justify-between"
+                      className="group bg-[#23052D] rounded-2xl overflow-hidden border-2 border-[#FFA175]/30 hover:border-[#FFA175] shadow-lg flex flex-col justify-between"
                     >
                       <div className="aspect-[3/4] w-full overflow-hidden relative bg-black">
                         <img
@@ -333,7 +333,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         {activeTab === 'history' && (
           <div>
             {watchHistory.length === 0 ? (
-              <div className="p-12 text-center rounded-3xl bg-[#2A0201]/60 border border-[#FFA175]/30 space-y-3">
+              <div className="p-12 text-center rounded-3xl bg-[#190222]/80 border border-[#FFA175]/30 space-y-3">
                 <Clock className="w-12 h-12 text-[#FFA175]/50 mx-auto" />
                 <h3 className="font-display font-black text-lg text-[#FFF3E9]">No Watch History Yet</h3>
                 <p className="text-xs text-[#FFF3E9]/70 max-w-sm mx-auto">
@@ -353,7 +353,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                   return (
                     <div
                       key={hist.id}
-                      className="group bg-[#2A0201] rounded-2xl overflow-hidden border-2 border-[#FFA175]/30 hover:border-[#FFA175] shadow-lg flex flex-col justify-between"
+                      className="group bg-[#23052D] rounded-2xl overflow-hidden border-2 border-[#FFA175]/30 hover:border-[#FFA175] shadow-lg flex flex-col justify-between"
                     >
                       <div className="aspect-[3/4] w-full overflow-hidden relative bg-black">
                         <img

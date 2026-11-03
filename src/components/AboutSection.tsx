@@ -4,14 +4,14 @@ import { Sparkles, Heart, Film, ShieldCheck, Award, Star } from 'lucide-react';
 export const AboutSection: React.FC = () => {
   return (
     <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div className="rounded-3xl bg-[#3E0401] border-2 border-[#FFA175]/40 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+      <div className="rounded-3xl bg-[#23052D] border-2 border-[#FFA175]/40 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
         {/* Decorative corner glow */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#FFA175]/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Text */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5C0702] border border-[#FFA175]/50 text-xs font-bold text-[#FFA175]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2E083B] border border-[#FFA175]/50 text-xs font-bold text-[#FFA175]">
               <Sparkles className="w-3.5 h-3.5" />
               <span>KITO'S TOONS – WHERE ANIMATION COMES TO LIFE!</span>
             </div>
@@ -26,19 +26,19 @@ export const AboutSection: React.FC = () => {
 
             {/* Core Values Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
-              <div className="p-4 rounded-2xl bg-[#5C0702]/80 border border-[#FFA175]/20 space-y-1.5">
+              <div className="p-4 rounded-2xl bg-[#190222]/80 border border-[#FFA175]/20 space-y-1.5">
                 <Film className="w-5 h-5 text-[#FFA175]" />
                 <h4 className="font-display font-bold text-sm text-[#FFF3E9]">Rich Animation</h4>
                 <p className="text-xs text-[#FFF3E9]/70">Curated short films, 3D gems & classic adventures.</p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-[#5C0702]/80 border border-[#FFA175]/20 space-y-1.5">
+              <div className="p-4 rounded-2xl bg-[#190222]/80 border border-[#FFA175]/20 space-y-1.5">
                 <ShieldCheck className="w-5 h-5 text-[#FFA175]" />
                 <h4 className="font-display font-bold text-sm text-[#FFF3E9]">100% Family Safe</h4>
                 <p className="text-xs text-[#FFF3E9]/70">Wholesome humor and safe content for every age group.</p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-[#5C0702]/80 border border-[#FFA175]/20 space-y-1.5">
+              <div className="p-4 rounded-2xl bg-[#190222]/80 border border-[#FFA175]/20 space-y-1.5">
                 <Heart className="w-5 h-5 text-[#FFA175]" />
                 <h4 className="font-display font-bold text-sm text-[#FFF3E9]">Free For Everyone</h4>
                 <p className="text-xs text-[#FFF3E9]/70">Streaming happiness without barriers or paywalls.</p>
@@ -46,7 +46,7 @@ export const AboutSection: React.FC = () => {
             </div>
 
             {/* Creator Spotlight */}
-            <div className="p-5 rounded-2xl bg-gradient-to-r from-[#5C0702] to-[#7E0A04]/60 border border-[#FFA175]/40 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <div className="p-5 rounded-2xl bg-gradient-to-r from-[#190222] to-[#3B0E4C]/70 border border-[#FFA175]/40 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
               <div className="w-14 h-14 rounded-2xl bg-[#FFA175] text-[#2A0201] flex items-center justify-center font-display font-black text-2xl shadow-lg shrink-0">
                 K
               </div>
@@ -72,7 +72,7 @@ export const AboutSection: React.FC = () => {
 
           {/* Right Mascot Showcase Card */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm rounded-3xl overflow-hidden border-3 border-[#FFA175] bg-[#5C0702] p-4 text-center shadow-2xl shadow-[#3E0401]">
+            <div className="relative w-full max-w-sm rounded-3xl overflow-hidden border-3 border-[#FFA175] bg-[#23052D] p-4 text-center shadow-2xl shadow-[#16021F]">
               <div className="aspect-square w-full rounded-2xl overflow-hidden mb-4 border border-[#FFA175]/30">
                 <img
                   src="/src/assets/images/kito_mascot_avatar_1793709129479.jpg"

@@ -148,19 +148,19 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="relative w-full max-w-md rounded-3xl bg-[#3E0401] border-2 border-[#FFA175]/50 shadow-2xl p-6 sm:p-8 text-[#FFF3E9] overflow-hidden">
+      <div className="relative w-full max-w-md rounded-3xl bg-[#23052D] border-2 border-[#FFA175]/50 shadow-2xl p-6 sm:p-8 text-[#FFF3E9] overflow-hidden">
         {/* Close Button */}
         <button
           onClick={onClose}
           aria-label="Close modal"
-          className="absolute top-5 right-5 p-2 rounded-full text-[#FFF3E9]/70 hover:text-[#FFA175] hover:bg-[#5C0702] transition-colors cursor-pointer"
+          className="absolute top-5 right-5 p-2 rounded-full text-[#FFF3E9]/70 hover:text-[#FFA175] hover:bg-[#190222] transition-colors cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Modal Brand Header */}
         <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#5C0702] border-2 border-[#FFA175] shadow-lg mb-3">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#190222] border-2 border-[#FFA175] shadow-lg mb-3">
             <img
               src="/src/assets/images/kito_mascot_avatar_1793709129479.jpg"
               alt="Kito Mascot"
@@ -214,7 +214,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   placeholder="e.g. Maya Kitooke"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#5C0702]/80 border border-[#FFA175]/30 focus:border-[#FFA175] focus:ring-1 focus:ring-[#FFA175] text-sm text-[#FFF3E9] placeholder-[#FFF3E9]/40 outline-none transition-all"
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#190222]/90 border border-[#FFA175]/30 focus:border-[#FFA175] focus:ring-1 focus:ring-[#FFA175] text-sm text-[#FFF3E9] placeholder-[#FFF3E9]/40 outline-none transition-all"
                 />
               </div>
             </div>
@@ -232,7 +232,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 placeholder="name@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#5C0702]/80 border border-[#FFA175]/30 focus:border-[#FFA175] focus:ring-1 focus:ring-[#FFA175] text-sm text-[#FFF3E9] placeholder-[#FFF3E9]/40 outline-none transition-all"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#190222]/90 border border-[#FFA175]/30 focus:border-[#FFA175] focus:ring-1 focus:ring-[#FFA175] text-sm text-[#FFF3E9] placeholder-[#FFF3E9]/40 outline-none transition-all"
               />
             </div>
           </div>
@@ -261,7 +261,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-[#5C0702]/80 border border-[#FFA175]/30 focus:border-[#FFA175] focus:ring-1 focus:ring-[#FFA175] text-sm text-[#FFF3E9] placeholder-[#FFF3E9]/40 outline-none transition-all"
+                  className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-[#190222]/90 border border-[#FFA175]/30 focus:border-[#FFA175] focus:ring-1 focus:ring-[#FFA175] text-sm text-[#FFF3E9] placeholder-[#FFF3E9]/40 outline-none transition-all"
                 />
                 <button
                   type="button"
@@ -287,7 +287,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   placeholder="••••••••"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-[#5C0702]/80 border border-[#FFA175]/30 focus:border-[#FFA175] focus:ring-1 focus:ring-[#FFA175] text-sm text-[#FFF3E9] placeholder-[#FFF3E9]/40 outline-none transition-all"
+                  className="w-full pl-10 pr-10 py-2.5 rounded-xl bg-[#190222]/90 border border-[#FFA175]/30 focus:border-[#FFA175] focus:ring-1 focus:ring-[#FFA175] text-sm text-[#FFF3E9] placeholder-[#FFF3E9]/40 outline-none transition-all"
                 />
                 <button
                   type="button"
@@ -322,7 +322,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           <div className="mt-5 space-y-4">
             <div className="relative flex items-center justify-center">
               <div className="border-t border-[#FFA175]/20 w-full" />
-              <span className="bg-[#3E0401] px-3 text-[11px] font-semibold text-[#FFA175]/80 uppercase tracking-wider absolute">
+              <span className="bg-[#23052D] px-3 text-[11px] font-semibold text-[#FFA175]/80 uppercase tracking-wider absolute">
                 or continue with
               </span>
             </div>

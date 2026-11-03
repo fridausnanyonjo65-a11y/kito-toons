@@ -53,7 +53,7 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
               <span>{cat.name}</span>
               <span
                 className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
-                  isSelected ? 'bg-[#2A0201] text-[#FFA175]' : 'bg-black/35 text-[#FFA175] border border-[#FFA175]/30'
+                  isSelected ? 'bg-[#190222] text-[#FFA175]' : 'bg-black/35 text-[#FFA175] border border-[#FFA175]/30'
                 }`}
               >
                 {count}

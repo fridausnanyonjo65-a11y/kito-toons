@@ -3,8 +3,8 @@ import React from 'react';
 export const AnimatedBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 select-none">
-      {/* Deep atmospheric cherry radial glow */}
-      <div className="absolute inset-0 bg-radial-[at_top_center] from-[#8B140D]/30 via-[#5C0702]/60 to-[#350301]/95" />
+      {/* Deep atmospheric plum purple radial glow */}
+      <div className="absolute inset-0 bg-radial-[at_top_center] from-[#48125C]/40 via-[#2E083B]/75 to-[#16021F]/98" />
 
       {/* Floating Animated Cartoon Clouds */}
       <div className="absolute top-[8%] left-0 w-full opacity-20">
@@ -100,9 +100,9 @@ export const AnimatedBackground: React.FC = () => {
         <svg width="64" height="64" viewBox="0 0 100 100" fill="none" className="text-[#FFA175]">
           {/* Whimsical mini spark sprite with little wings */}
           <circle cx="50" cy="50" r="22" fill="#FFA175" />
-          <circle cx="43" cy="46" r="3.5" fill="#5C0702" />
-          <circle cx="57" cy="46" r="3.5" fill="#5C0702" />
-          <path d="M46 54C48 57 52 57 54 54" stroke="#5C0702" strokeWidth="2.5" strokeLinecap="round" />
+          <circle cx="43" cy="46" r="3.5" fill="#190222" />
+          <circle cx="57" cy="46" r="3.5" fill="#190222" />
+          <path d="M46 54C48 57 52 57 54 54" stroke="#190222" strokeWidth="2.5" strokeLinecap="round" />
           {/* Wings */}
           <path d="M28 46C18 36 14 50 26 56" fill="#FFF3E9" fillOpacity="0.8" />
           <path d="M72 46C82 36 86 50 74 56" fill="#FFF3E9" fillOpacity="0.8" />

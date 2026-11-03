@@ -9,13 +9,13 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavClick, onOpenPolicy }) => {
   return (
-    <footer className="bg-[#350301] text-[#FFF3E9] border-t-2 border-[#FFA175]/30 relative z-10 pt-16 pb-12">
+    <footer className="bg-[#16021F] text-[#FFF3E9] border-t-2 border-[#FFA175]/30 relative z-10 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#FFA175]/20">
           {/* Col 1: Brand & Slogan */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-[#5C0702] border-2 border-[#FFA175] overflow-hidden flex items-center justify-center">
+              <div className="w-10 h-10 rounded-2xl bg-[#23052D] border-2 border-[#FFA175] overflow-hidden flex items-center justify-center">
                 <img
                   src="/src/assets/images/kito_mascot_avatar_1793709129479.jpg"
                   alt="Kito's Toons"

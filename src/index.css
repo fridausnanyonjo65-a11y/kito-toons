@@ -3,15 +3,16 @@
 @layer base {
   :root {
     --color-butternut: #FFA175;
-    --color-cherry: #5C0702;
+    --color-plum: #2E083B;
+    --color-plum-dark: #190222;
+    --color-plum-surface: #23052D;
+    --color-plum-light: #48125C;
     --color-cream: #FFF3E9;
-    --color-cherry-dark: #3E0401;
-    --color-cherry-light: #7E0A04;
   }
 
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    background-color: #5C0702;
+    background-color: #2E083B;
     color: #FFF3E9;
     overflow-x: hidden;
   }
@@ -117,7 +118,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #3E0401;
+  background: #190222;
 }
 
 ::-webkit-scrollbar-thumb {

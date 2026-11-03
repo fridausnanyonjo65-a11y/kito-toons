@@ -19,7 +19,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         {/* Left Column: Heading, Subtitle & CTAs */}
         <div className="lg:col-span-7 space-y-6 text-center lg:text-left z-10">
           {/* Brand Slogan Ribbon */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3E0401]/90 border border-[#FFA175]/50 text-xs font-semibold text-[#FFA175] shadow-inner">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#190222]/90 border border-[#FFA175]/50 text-xs font-semibold text-[#FFA175] shadow-inner">
             <Sparkles className="w-3.5 h-3.5 text-[#FFA175] animate-spin" style={{ animationDuration: '6s' }} />
             <span>KITO'S TOONS – WHERE ANIMATION COMES TO LIFE!</span>
           </div>
@@ -45,7 +45,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               onClick={() => onWatchNow(featuredMovie)}
               className="group flex items-center gap-3 px-7 py-4 text-base font-black text-[#2A0201] bg-[#FFA175] hover:bg-[#ff8e5b] rounded-2xl shadow-xl shadow-[#FFA175]/30 hover:shadow-[#FFA175]/50 transition-all transform hover:-translate-y-1 active:translate-y-0 cursor-pointer"
             >
-              <div className="w-8 h-8 rounded-full bg-[#2A0201] text-[#FFA175] flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-8 h-8 rounded-full bg-[#190222] text-[#FFA175] flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Play className="w-4 h-4 fill-current ml-0.5" />
               </div>
               <span>WATCH NOW</span>
@@ -79,7 +79,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
         {/* Right Column: Featured Grand Artwork Showcase */}
         <div className="lg:col-span-5 relative">
-          <div className="relative rounded-3xl overflow-hidden border-3 border-[#FFA175]/60 shadow-2xl shadow-[#3E0401]/90 bg-[#3E0401] group">
+          <div className="relative rounded-3xl overflow-hidden border-3 border-[#FFA175]/60 shadow-2xl shadow-[#190222]/90 bg-[#23052D] group">
             {/* Aspect Ratio Container */}
             <div className="aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden relative">
               <img
@@ -88,7 +88,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#3E0401] via-transparent to-black/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#190222] via-transparent to-black/20" />
 
               {/* Quick Play Overlay Button */}
               <button
@@ -96,19 +96,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 aria-label={`Play ${featuredMovie.title}`}
                 className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors cursor-pointer"
               >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#FFA175] text-[#5C0702] flex items-center justify-center shadow-2xl group-hover:scale-115 transition-transform">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#FFA175] text-[#2E083B] flex items-center justify-center shadow-2xl group-hover:scale-115 transition-transform">
                   <Play className="w-8 h-8 sm:w-10 sm:h-10 fill-current ml-1" />
                 </div>
               </button>
 
               {/* Category pill-free text kicker */}
-              <div className="absolute top-4 left-4 bg-[#3E0401]/90 backdrop-blur-sm border border-[#FFA175]/40 rounded-xl px-3 py-1 text-xs font-bold text-[#FFA175]">
+              <div className="absolute top-4 left-4 bg-[#190222]/90 backdrop-blur-sm border border-[#FFA175]/40 rounded-xl px-3 py-1 text-xs font-bold text-[#FFA175]">
                 Spotlight Feature
               </div>
             </div>
 
             {/* Bottom Card Bar */}
-            <div className="p-5 bg-[#3E0401] flex items-center justify-between border-t border-[#FFA175]/20">
+            <div className="p-5 bg-[#23052D] flex items-center justify-between border-t border-[#FFA175]/20">
               <div>
                 <h3 className="font-display font-bold text-lg text-[#FFF3E9] truncate max-w-[240px] sm:max-w-xs">
                   {featuredMovie.title}
@@ -128,7 +128,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {/* Whimsical Mascot Floating Badge */}
-          <div className="absolute -bottom-6 -left-6 sm:-left-8 bg-[#5C0702] border-2 border-[#FFA175] rounded-2xl p-3 shadow-xl flex items-center gap-3 animate-gentle-bounce">
+          <div className="absolute -bottom-6 -left-6 sm:-left-8 bg-[#23052D] border-2 border-[#FFA175] rounded-2xl p-3 shadow-xl flex items-center gap-3 animate-gentle-bounce">
             <div className="w-12 h-12 rounded-xl overflow-hidden border border-[#FFA175]/50 shrink-0">
               <img
                 src="/src/assets/images/kito_mascot_avatar_1793709129479.jpg"

@@ -98,7 +98,7 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#5C0702] text-[#FFF3E9] flex flex-col relative selection:bg-[#FFA175] selection:text-[#5C0702]">
+    <div className="min-h-screen bg-[#2E083B] text-[#FFF3E9] flex flex-col relative selection:bg-[#FFA175] selection:text-[#2E083B]">
       {/* Animated Cartoon Background with floating bubbles, drifting clouds & stars */}
       <AnimatedBackground />
 
@@ -146,7 +146,7 @@ const AppContent: React.FC = () => {
         {activeTab === 'movies' && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#3E0401] border border-[#FFA175]/40 text-xs font-bold text-[#FFA175]">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#23052D] border border-[#FFA175]/40 text-xs font-bold text-[#FFA175]">
                 <Film className="w-3.5 h-3.5" />
                 <span>ALL ANIMATION MOVIES & CARTOONS</span>
               </div>
@@ -167,7 +167,7 @@ const AppContent: React.FC = () => {
                   placeholder="Search cartoons by title, character, or director..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-[#3E0401] border border-[#FFA175]/30 focus:border-[#FFA175] text-xs sm:text-sm text-[#FFF3E9] placeholder-[#FFF3E9]/40 outline-none"
+                  className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-[#23052D] border border-[#FFA175]/30 focus:border-[#FFA175] text-xs sm:text-sm text-[#FFF3E9] placeholder-[#FFF3E9]/40 outline-none"
                 />
               </div>
 
@@ -189,7 +189,7 @@ const AppContent: React.FC = () => {
 
             {/* Movies Grid */}
             {filteredMovies.length === 0 ? (
-              <div className="p-16 text-center rounded-3xl bg-[#2A0201]/60 border border-[#FFA175]/30 space-y-3">
+              <div className="p-16 text-center rounded-3xl bg-[#23052D]/80 border border-[#FFA175]/30 space-y-3">
                 <Film className="w-12 h-12 text-[#FFA175]/50 mx-auto" />
                 <h3 className="font-display font-black text-lg text-[#FFF3E9]">No Cartoons Found</h3>
                 <p className="text-xs text-[#FFF3E9]/70 max-w-sm mx-auto">
@@ -224,7 +224,7 @@ const AppContent: React.FC = () => {
         {activeTab === 'categories' && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#3E0401] border border-[#FFA175]/40 text-xs font-bold text-[#FFA175]">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#23052D] border border-[#FFA175]/40 text-xs font-bold text-[#FFA175]">
                 <Compass className="w-3.5 h-3.5" />
                 <span>EXPLORE BY GENRE</span>
               </div>
@@ -276,7 +276,7 @@ const AppContent: React.FC = () => {
 
             {/* Quick Filter Ribbon on Homepage */}
             <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-              <div className="p-4 rounded-3xl bg-[#2A0201]/90 border-2 border-[#FFA175]/35 shadow-xl">
+              <div className="p-4 rounded-3xl bg-[#23052D]/90 border-2 border-[#FFA175]/35 shadow-xl">
                 <CategoryFilter
                   selectedCategory={selectedCategory}
                   onSelectCategory={(cat) => {

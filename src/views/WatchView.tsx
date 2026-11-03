@@ -149,7 +149,7 @@ export const WatchView: React.FC<WatchViewProps> = ({
     .slice(0, 4);
 
   return (
-    <div className="min-h-screen bg-[#5C0702] text-[#FFF3E9] pb-20">
+    <div className="min-h-screen bg-[#2E083B] text-[#FFF3E9] pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
         {/* Top Back Navigation Bar */}
         <div className="flex items-center justify-between mb-6">
@@ -311,7 +311,7 @@ export const WatchView: React.FC<WatchViewProps> = ({
             </div>
 
             {/* Storyline / Synopsis */}
-            <div className="p-6 rounded-3xl bg-[#3E0401]/90 border border-[#FFA175]/25 space-y-3">
+            <div className="p-6 rounded-3xl bg-[#23052D]/90 border border-[#FFA175]/25 space-y-3">
               <h3 className="font-display font-bold text-lg text-[#FFA175] flex items-center gap-2">
                 <Film className="w-5 h-5" />
                 <span>Storyline</span>
@@ -323,7 +323,7 @@ export const WatchView: React.FC<WatchViewProps> = ({
 
             {/* Fun Animation Fact */}
             {movie.funFact && (
-              <div className="p-5 rounded-2xl bg-gradient-to-r from-[#7E0A04]/40 to-[#3E0401]/60 border border-[#FFA175]/30 flex items-start gap-3.5">
+              <div className="p-5 rounded-2xl bg-gradient-to-r from-[#3B0E4C]/50 to-[#190222]/80 border border-[#FFA175]/30 flex items-start gap-3.5">
                 <Sparkles className="w-5 h-5 text-[#FFA175] shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-bold text-[#FFA175] uppercase tracking-wider">Animation Studio Trivia</p>
@@ -343,7 +343,7 @@ export const WatchView: React.FC<WatchViewProps> = ({
                   {movie.characters.map((char, i) => (
                     <div
                       key={i}
-                      className="p-3.5 rounded-2xl bg-[#3E0401] border border-[#FFA175]/20 flex flex-col"
+                      className="p-3.5 rounded-2xl bg-[#23052D] border border-[#FFA175]/20 flex flex-col"
                     >
                       <p className="font-display font-bold text-sm text-[#FFA175]">{char.name}</p>
                       <p className="text-xs text-[#FFF3E9]/70 mt-0.5">{char.role}</p>
@@ -356,7 +356,7 @@ export const WatchView: React.FC<WatchViewProps> = ({
 
           {/* Right Column: Poster Snapshot & Quick Info */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="rounded-3xl overflow-hidden border-2 border-[#FFA175]/50 bg-[#2A0201] p-5 text-center shadow-xl">
+            <div className="rounded-3xl overflow-hidden border-2 border-[#FFA175]/50 bg-[#23052D] p-5 text-center shadow-xl">
               <div className="aspect-[3/4] w-full rounded-2xl overflow-hidden mb-4 border border-[#FFA175]/30 relative">
                 <img
                   src={movie.posterUrl}

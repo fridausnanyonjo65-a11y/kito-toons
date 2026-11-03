@@ -36,7 +36,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#5C0702]/95 backdrop-blur-md border-b border-[#FFA175]/20 text-[#FFF3E9] transition-all">
+    <header className="sticky top-0 z-50 bg-[#2E083B]/95 backdrop-blur-md border-b border-[#FFA175]/20 text-[#FFF3E9] transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-8">
         {/* Zone 1: Brand Wordmark & Mascot */}
         <div className="flex items-center gap-3 shrink-0">
@@ -44,7 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => handleNavClick('home')}
             className="flex items-center gap-3 group text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFA175]"
           >
-            <div className="relative w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#3E0401] to-[#7E0A04] border-2 border-[#FFA175] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform overflow-hidden">
+            <div className="relative w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#190222] to-[#3B0E4C] border-2 border-[#FFA175] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform overflow-hidden">
               <img
                 src="/src/assets/images/kito_mascot_avatar_1793709129479.jpg"
                 alt="Kito Mascot"
@@ -145,7 +145,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               {/* Profile Dropdown Menu */}
               {profileDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-56 rounded-2xl bg-[#2A0201] border-2 border-[#FFA175]/40 shadow-2xl p-2 z-50 text-sm animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute right-0 mt-2 w-56 rounded-2xl bg-[#190222] border-2 border-[#FFA175]/40 shadow-2xl p-2 z-50 text-sm animate-in fade-in slide-in-from-top-2 duration-150">
                   <div className="px-3 py-2 border-b border-[#FFA175]/15 mb-1">
                     <p className="text-xs font-bold text-[#FFA175] truncate">
                       {userProfile?.displayName || 'Animation Fan'}
@@ -219,7 +219,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#3E0401] border-b border-[#FFA175]/30 px-6 py-4 flex flex-col gap-3">
+        <div className="md:hidden bg-[#23052D] border-b border-[#FFA175]/30 px-6 py-4 flex flex-col gap-3">
           <button
             onClick={() => handleNavClick('home')}
             className={`text-left py-2 text-sm font-semibold ${

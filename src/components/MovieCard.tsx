@@ -39,10 +39,10 @@ export const MovieCard: React.FC<MovieCardProps> = ({
   return (
     <div
       onClick={() => onWatch(movie)}
-      className="group relative bg-[#2A0201] rounded-2xl overflow-hidden border-2 border-[#FFA175]/30 hover:border-[#FFA175] transition-all duration-300 hover:shadow-xl hover:shadow-[#FFA175]/25 hover:-translate-y-1.5 flex flex-col cursor-pointer"
+      className="group relative bg-[#23052D] rounded-2xl overflow-hidden border-2 border-[#FFA175]/30 hover:border-[#FFA175] transition-all duration-300 hover:shadow-xl hover:shadow-[#FFA175]/25 hover:-translate-y-1.5 flex flex-col cursor-pointer"
     >
       {/* Poster Image Container */}
-      <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#1D0100]">
+      <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#190222]">
         {!imageError ? (
           <img
             src={movie.posterUrl}
@@ -53,14 +53,14 @@ export const MovieCard: React.FC<MovieCardProps> = ({
             loading="lazy"
           />
         ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-b from-[#2A0201] to-[#120000]">
+          <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-b from-[#23052D] to-[#16021F]">
             <Film className="w-12 h-12 text-[#FFA175]/60 mb-2" />
             <p className="font-display font-bold text-sm text-[#FFA175]">{movie.title}</p>
           </div>
         )}
 
         {/* Poster Gradient Scrim */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#2A0201] via-transparent to-black/30 opacity-70 group-hover:opacity-40 transition-opacity" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#23052D] via-transparent to-black/30 opacity-70 group-hover:opacity-40 transition-opacity" />
 
         {/* Top Badges: Price, Rating & Favorite */}
         <div className="absolute top-3 inset-x-3 flex items-center justify-between z-10">
@@ -101,7 +101,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
       </div>
 
       {/* Card Content & Details */}
-      <div className="p-4 flex-1 flex flex-col justify-between space-y-3 bg-[#2A0201]">
+      <div className="p-4 flex-1 flex flex-col justify-between space-y-3 bg-[#23052D]">
         <div>
           {/* Metadata clean unboxed text */}
           <div className="flex items-center gap-2 text-xs text-[#FFA175] font-semibold mb-1">

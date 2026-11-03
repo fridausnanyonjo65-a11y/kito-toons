@@ -11,16 +11,16 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({ type, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in">
-      <div className="relative w-full max-w-2xl rounded-3xl bg-[#3E0401] border-2 border-[#FFA175]/50 shadow-2xl p-6 sm:p-8 text-[#FFF3E9] max-h-[85vh] overflow-y-auto">
+      <div className="relative w-full max-w-2xl rounded-3xl bg-[#23052D] border-2 border-[#FFA175]/50 shadow-2xl p-6 sm:p-8 text-[#FFF3E9] max-h-[85vh] overflow-y-auto">
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full text-[#FFF3E9]/70 hover:text-[#FFA175] hover:bg-[#5C0702] transition-colors cursor-pointer"
+          className="absolute top-5 right-5 p-2 rounded-full text-[#FFF3E9]/70 hover:text-[#FFA175] hover:bg-[#190222] transition-colors cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
 
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-3 rounded-2xl bg-[#5C0702] border border-[#FFA175]/40 text-[#FFA175]">
+          <div className="p-3 rounded-2xl bg-[#190222] border border-[#FFA175]/40 text-[#FFA175]">
             {type === 'privacy' ? <Shield className="w-6 h-6" /> : <FileText className="w-6 h-6" />}
           </div>
           <div>
