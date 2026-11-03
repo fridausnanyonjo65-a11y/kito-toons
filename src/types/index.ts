@@ -22,6 +22,8 @@ export interface Movie {
   isPopular?: boolean;
   isRecentlyAdded?: boolean;
   director: string;
+  price: string;
+  purchasePrice?: string;
   funFact?: string;
   characters?: { name: string; role: string }[];
 }

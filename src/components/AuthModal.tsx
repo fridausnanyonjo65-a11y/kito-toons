@@ -304,9 +304,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 px-4 rounded-2xl font-bold text-sm text-[#5C0702] bg-[#FFA175] hover:bg-[#ff8e5b] shadow-lg shadow-[#FFA175]/25 active:scale-98 transition-all cursor-pointer flex items-center justify-center gap-2 mt-2"
+            className="w-full py-3.5 px-4 rounded-2xl font-black text-sm text-[#2A0201] bg-[#FFA175] hover:bg-[#ff8e5b] shadow-xl shadow-[#FFA175]/30 active:scale-98 transition-all cursor-pointer flex items-center justify-center gap-2 mt-2"
           >
-            {loading && <div className="w-4 h-4 border-2 border-[#5C0702] border-t-transparent rounded-full animate-spin" />}
+            {loading && <div className="w-4 h-4 border-2 border-[#2A0201] border-t-transparent rounded-full animate-spin" />}
             <span>
               {mode === 'signup'
                 ? 'Create Account'
@@ -331,7 +331,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               type="button"
               onClick={handleGoogleAuth}
               disabled={loading}
-              className="w-full py-2.5 px-4 rounded-xl font-semibold text-xs text-[#FFF3E9] bg-[#5C0702]/80 hover:bg-[#5C0702] border border-[#FFA175]/30 hover:border-[#FFA175] transition-all cursor-pointer flex items-center justify-center gap-2.5"
+              className="w-full py-3 px-4 rounded-xl font-bold text-xs text-slate-900 bg-white hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer flex items-center justify-center gap-2.5 shadow-md"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24">
                 <path

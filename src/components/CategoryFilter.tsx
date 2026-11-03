@@ -45,15 +45,15 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
               onClick={() => onSelectCategory(cat.name)}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer border ${
                 isSelected
-                  ? 'bg-[#FFA175] text-[#5C0702] border-[#FFA175] shadow-lg shadow-[#FFA175]/25 scale-102'
-                  : 'bg-[#3E0401]/80 text-[#FFF3E9]/80 border-[#FFA175]/30 hover:border-[#FFA175] hover:text-[#FFF3E9] hover:bg-[#3E0401]'
+                  ? 'bg-[#FFA175] text-[#2A0201] border-[#FFA175] shadow-lg shadow-[#FFA175]/30 scale-102 font-black'
+                  : 'bg-white/10 text-[#FFF3E9] border-white/25 hover:border-[#FFA175] hover:bg-white/20 hover:text-[#FFA175]'
               }`}
             >
               <Icon className="w-4 h-4" />
               <span>{cat.name}</span>
               <span
                 className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
-                  isSelected ? 'bg-[#5C0702] text-[#FFA175]' : 'bg-[#5C0702]/80 text-[#FFA175]'
+                  isSelected ? 'bg-[#2A0201] text-[#FFA175]' : 'bg-black/35 text-[#FFA175] border border-[#FFA175]/30'
                 }`}
               >
                 {count}

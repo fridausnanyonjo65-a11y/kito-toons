@@ -47,7 +47,7 @@ export const AboutSection: React.FC = () => {
 
             {/* Creator Spotlight */}
             <div className="p-5 rounded-2xl bg-gradient-to-r from-[#5C0702] to-[#7E0A04]/60 border border-[#FFA175]/40 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-              <div className="w-14 h-14 rounded-2xl bg-[#FFA175] text-[#5C0702] flex items-center justify-center font-display font-black text-2xl shadow-lg shrink-0">
+              <div className="w-14 h-14 rounded-2xl bg-[#FFA175] text-[#2A0201] flex items-center justify-center font-display font-black text-2xl shadow-lg shrink-0">
                 K
               </div>
               <div className="flex-1">
@@ -61,7 +61,7 @@ export const AboutSection: React.FC = () => {
                 <div className="mt-2 flex items-center gap-2">
                   <a
                     href="tel:+256750617186"
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#3E0401] border border-[#FFA175]/40 text-xs font-bold text-[#FFA175] hover:bg-[#FFA175] hover:text-[#5C0702] transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#FFA175] hover:bg-[#ff8e5b] text-xs font-black text-[#2A0201] shadow transition-all cursor-pointer"
                   >
                     <span>📞 +256-750-617-186</span>
                   </a>

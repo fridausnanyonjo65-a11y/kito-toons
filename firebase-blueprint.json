@@ -33,7 +33,9 @@
         "isFeatured": { "type": "boolean" },
         "isPopular": { "type": "boolean" },
         "isRecentlyAdded": { "type": "boolean" },
-        "director": { "type": "string", "maxLength": 120 }
+        "director": { "type": "string", "maxLength": 120 },
+        "price": { "type": "string", "maxLength": 20 },
+        "purchasePrice": { "type": "string", "maxLength": 20 }
       },
       "required": ["id", "title", "description", "category", "videoUrl"]
     },

@@ -43,9 +43,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
             <button
               onClick={() => onWatchNow(featuredMovie)}
-              className="group flex items-center gap-3 px-7 py-4 text-base font-bold text-[#5C0702] bg-[#FFA175] hover:bg-[#ff8e5b] rounded-2xl shadow-xl shadow-[#FFA175]/25 hover:shadow-[#FFA175]/40 transition-all transform hover:-translate-y-1 active:translate-y-0 cursor-pointer"
+              className="group flex items-center gap-3 px-7 py-4 text-base font-black text-[#2A0201] bg-[#FFA175] hover:bg-[#ff8e5b] rounded-2xl shadow-xl shadow-[#FFA175]/30 hover:shadow-[#FFA175]/50 transition-all transform hover:-translate-y-1 active:translate-y-0 cursor-pointer"
             >
-              <div className="w-8 h-8 rounded-full bg-[#5C0702] text-[#FFA175] flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-8 h-8 rounded-full bg-[#2A0201] text-[#FFA175] flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Play className="w-4 h-4 fill-current ml-0.5" />
               </div>
               <span>WATCH NOW</span>
@@ -53,7 +53,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
             <button
               onClick={onExplore}
-              className="flex items-center gap-2.5 px-6 py-4 text-base font-semibold text-[#FFF3E9] bg-[#3E0401]/80 hover:bg-[#3E0401] border border-[#FFA175]/40 hover:border-[#FFA175] rounded-2xl transition-all cursor-pointer"
+              className="flex items-center gap-2.5 px-6 py-4 text-base font-bold text-white hover:text-[#FFA175] bg-white/10 hover:bg-white/20 border-2 border-white/30 hover:border-[#FFA175] rounded-2xl transition-all cursor-pointer shadow-lg"
             >
               <Compass className="w-5 h-5 text-[#FFA175]" />
               <span>Explore Movies</span>
@@ -120,7 +120,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               <button
                 onClick={() => onWatchNow(featuredMovie)}
-                className="px-4 py-2 text-xs font-bold text-[#5C0702] bg-[#FFA175] hover:bg-[#ff8e5b] rounded-xl transition-colors cursor-pointer"
+                className="px-4 py-2 text-xs font-black text-[#2A0201] bg-[#FFA175] hover:bg-[#ff8e5b] rounded-xl transition-colors cursor-pointer shadow"
               >
                 Watch Now
               </button>

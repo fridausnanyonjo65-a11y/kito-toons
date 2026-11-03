@@ -155,7 +155,7 @@ export const WatchView: React.FC<WatchViewProps> = ({
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={onBack}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#3E0401]/90 border border-[#FFA175]/30 hover:border-[#FFA175] text-[#FFA175] hover:text-[#FFF3E9] transition-all cursor-pointer font-semibold text-xs"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-[#FFA175] text-[#FFA175] hover:text-[#2A0201] border border-[#FFA175]/60 hover:border-[#FFA175] transition-all cursor-pointer font-bold text-xs shadow"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to Collection</span>
@@ -164,7 +164,7 @@ export const WatchView: React.FC<WatchViewProps> = ({
           <div className="flex items-center gap-3">
             <button
               onClick={handleShare}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#3E0401]/90 border border-[#FFA175]/30 hover:border-[#FFA175] text-xs font-semibold text-[#FFF3E9] transition-all cursor-pointer"
+              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/25 hover:border-[#FFA175] text-xs font-bold text-[#FFF3E9] transition-all cursor-pointer"
             >
               {copiedShare ? <Check className="w-4 h-4 text-emerald-400" /> : <Share2 className="w-4 h-4 text-[#FFA175]" />}
               <span>{copiedShare ? 'Copied Link!' : 'Share'}</span>
@@ -178,10 +178,10 @@ export const WatchView: React.FC<WatchViewProps> = ({
                 }
                 toggleFavorite(movie);
               }}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border transition-all cursor-pointer text-xs font-semibold ${
+              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl border transition-all cursor-pointer text-xs font-bold ${
                 favorited
-                  ? 'bg-[#FFA175] text-[#5C0702] border-[#FFA175]'
-                  : 'bg-[#3E0401]/90 text-[#FFF3E9] border-[#FFA175]/30 hover:border-[#FFA175]'
+                  ? 'bg-[#FFA175] text-[#2A0201] border-[#FFA175] shadow'
+                  : 'bg-white/10 text-[#FFF3E9] border-[#FFA175]/50 hover:bg-[#FFA175] hover:text-[#2A0201]'
               }`}
             >
               <Heart className={`w-4 h-4 ${favorited ? 'fill-current' : ''}`} />
@@ -208,7 +208,7 @@ export const WatchView: React.FC<WatchViewProps> = ({
             <button
               onClick={togglePlay}
               aria-label="Play video"
-              className="absolute w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#FFA175] text-[#5C0702] flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all cursor-pointer"
+              className="absolute w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#FFA175] text-[#2A0201] flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all cursor-pointer"
             >
               <Play className="w-10 h-10 sm:w-12 sm:h-12 fill-current ml-1" />
             </button>
@@ -291,6 +291,9 @@ export const WatchView: React.FC<WatchViewProps> = ({
             <div>
               {/* Unboxed metadata */}
               <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-[#FFA175] mb-2">
+                <span className="font-mono font-black text-xs px-2.5 py-0.5 rounded-lg bg-[#FFA175] text-[#2A0201] shadow-sm">
+                  {movie.price}
+                </span>
                 <span>{movie.category}</span>
                 <span aria-hidden="true">·</span>
                 <span>{movie.duration}</span>
@@ -353,18 +356,52 @@ export const WatchView: React.FC<WatchViewProps> = ({
 
           {/* Right Column: Poster Snapshot & Quick Info */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="rounded-3xl overflow-hidden border-2 border-[#FFA175]/40 bg-[#3E0401] p-4 text-center">
-              <div className="aspect-[3/4] w-full rounded-2xl overflow-hidden mb-4">
+            <div className="rounded-3xl overflow-hidden border-2 border-[#FFA175]/50 bg-[#2A0201] p-5 text-center shadow-xl">
+              <div className="aspect-[3/4] w-full rounded-2xl overflow-hidden mb-4 border border-[#FFA175]/30 relative">
                 <img
                   src={movie.posterUrl}
                   alt={movie.title}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
+                <span className="absolute top-3 left-3 font-mono font-black text-xs px-3 py-1 rounded-lg bg-[#FFA175] text-[#2A0201] shadow-lg border border-[#FFA175]">
+                  {movie.price}
+                </span>
               </div>
-              <p className="font-display font-bold text-base text-[#FFF3E9]">{movie.title}</p>
-              <p className="text-xs text-[#FFA175] mt-1">Official Authorized Kito's Toons Release</p>
-              <p className="text-[11px] text-[#FFF3E9]/60 mt-2">
+              <h3 className="font-display font-black text-xl text-[#FFF3E9]">{movie.title}</h3>
+              <p className="text-xs text-[#FFA175] mt-1 font-semibold">{movie.category} · {movie.duration}</p>
+
+              {/* Pricing Cards */}
+              <div className="mt-4 p-3 rounded-2xl bg-black/40 border border-[#FFA175]/30 space-y-2 text-left">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs font-bold text-[#FFF3E9]">HD Rental (48 Hours)</p>
+                    <p className="text-[10px] text-[#FFF3E9]/60">Instant streaming access</p>
+                  </div>
+                  <span className="font-mono font-black text-base text-[#FFA175]">{movie.price}</span>
+                </div>
+
+                {movie.purchasePrice && (
+                  <div className="flex items-center justify-between pt-2 border-t border-white/10">
+                    <div>
+                      <p className="text-xs font-bold text-[#FFF3E9]">Buy & Keep Forever</p>
+                      <p className="text-[10px] text-[#FFF3E9]/60">Unlimited cloud replay</p>
+                    </div>
+                    <span className="font-mono font-black text-sm text-[#FFF3E9]">{movie.purchasePrice}</span>
+                  </div>
+                )}
+              </div>
+
+              {/* Play / Rent Action */}
+              <button
+                onClick={togglePlay}
+                className="w-full mt-4 py-3 px-4 rounded-xl font-black text-xs text-[#2A0201] bg-[#FFA175] hover:bg-[#ff8e5b] shadow-lg shadow-[#FFA175]/30 active:scale-98 transition-all cursor-pointer flex items-center justify-center gap-2"
+              >
+                <Play className="w-4 h-4 fill-current" />
+                <span>{isPlaying ? 'Pause Movie' : `Watch Movie Now (${movie.price})`}</span>
+              </button>
+
+              <p className="text-[11px] text-[#FFF3E9]/60 mt-3">
                 All animation movies streamed here adhere strictly to authorized distribution licenses and family safety standards.
               </p>
             </div>

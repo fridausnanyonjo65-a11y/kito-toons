@@ -124,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="relative">
               <button
                 onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
-                className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-[#3E0401]/80 border border-[#FFA175]/40 hover:border-[#FFA175] transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-[#FFA175]"
+                className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-[#FFA175]/60 hover:border-[#FFA175] transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-[#FFA175]"
               >
                 <div className="w-8 h-8 rounded-full overflow-hidden border border-[#FFA175] bg-[#FFA175]/20 flex items-center justify-center text-xs font-bold text-[#FFA175]">
                   {userProfile?.photoURL ? (
@@ -145,7 +145,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               {/* Profile Dropdown Menu */}
               {profileDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-56 rounded-2xl bg-[#3E0401] border border-[#FFA175]/30 shadow-2xl p-2 z-50 text-sm animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute right-0 mt-2 w-56 rounded-2xl bg-[#2A0201] border-2 border-[#FFA175]/40 shadow-2xl p-2 z-50 text-sm animate-in fade-in slide-in-from-top-2 duration-150">
                   <div className="px-3 py-2 border-b border-[#FFA175]/15 mb-1">
                     <p className="text-xs font-bold text-[#FFA175] truncate">
                       {userProfile?.displayName || 'Animation Fan'}
@@ -160,9 +160,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                       setProfileDropdownOpen(false);
                       handleNavClick('dashboard');
                     }}
-                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-left text-xs font-medium text-[#FFF3E9] hover:bg-[#5C0702] hover:text-[#FFA175] transition-colors cursor-pointer"
+                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-left text-xs font-bold text-[#FFF3E9] hover:bg-[#FFA175] hover:text-[#2A0201] transition-colors cursor-pointer"
                   >
-                    <User className="w-4 h-4 text-[#FFA175]" />
+                    <User className="w-4 h-4 text-[#FFA175] group-hover:text-[#2A0201]" />
                     <span>My Dashboard & Favorites</span>
                   </button>
 
@@ -171,7 +171,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       setProfileDropdownOpen(false);
                       handleNavClick('movies');
                     }}
-                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-left text-xs font-medium text-[#FFF3E9] hover:bg-[#5C0702] hover:text-[#FFA175] transition-colors cursor-pointer"
+                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-left text-xs font-bold text-[#FFF3E9] hover:bg-[#FFA175] hover:text-[#2A0201] transition-colors cursor-pointer"
                   >
                     <Film className="w-4 h-4 text-[#FFA175]" />
                     <span>Browse Animation</span>
@@ -181,7 +181,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                   <button
                     onClick={handleSignOut}
-                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-left text-xs font-medium text-red-300 hover:bg-red-950/40 hover:text-red-200 transition-colors cursor-pointer"
+                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-left text-xs font-medium text-red-300 hover:bg-red-500 hover:text-white transition-colors cursor-pointer"
                   >
                     <LogOut className="w-4 h-4" />
                     <span>Sign Out</span>
@@ -193,13 +193,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="flex items-center gap-2 sm:gap-3">
               <button
                 onClick={() => onOpenAuth('signin')}
-                className="px-3 sm:px-4 py-2 text-xs font-semibold text-[#FFF3E9] hover:text-[#FFA175] transition-colors cursor-pointer whitespace-nowrap"
+                className="px-3 sm:px-4 py-2 text-xs font-bold text-[#FFF3E9] hover:text-[#FFA175] transition-colors cursor-pointer whitespace-nowrap"
               >
                 Sign In
               </button>
               <button
                 onClick={() => onOpenAuth('signup')}
-                className="px-4 sm:px-5 py-2 text-xs font-bold text-[#5C0702] bg-[#FFA175] hover:bg-[#ff8e5b] rounded-xl shadow-md transition-transform hover:scale-105 active:scale-95 cursor-pointer whitespace-nowrap"
+                className="px-4 sm:px-5 py-2 text-xs font-black text-[#2A0201] bg-[#FFA175] hover:bg-[#ff8e5b] rounded-xl shadow-md transition-transform hover:scale-105 active:scale-95 cursor-pointer whitespace-nowrap"
               >
                 Sign Up
               </button>
@@ -209,7 +209,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Mobile hamburger button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-[#FFF3E9] hover:text-[#FFA175] hover:bg-[#3E0401]/60 focus-visible:outline-none"
+            className="md:hidden p-2 rounded-lg text-[#FFF3E9] hover:text-[#FFA175] hover:bg-white/10 focus-visible:outline-none"
             aria-label="Toggle navigation"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

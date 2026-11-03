@@ -83,7 +83,7 @@ export const ContactSection: React.FC = () => {
               <div className="pt-1 flex flex-wrap items-center gap-2">
                 <a
                   href="tel:+256750617186"
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#FFA175] text-[#5C0702] font-bold text-xs hover:bg-[#ff8e5b] transition-all shadow-md cursor-pointer"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#FFA175] text-[#2A0201] font-black text-xs hover:bg-[#ff8e5b] transition-all shadow-md cursor-pointer"
                 >
                   <Mail className="w-3.5 h-3.5 hidden" />
                   <span>📞 Call: +256-750-617-186</span>
@@ -191,9 +191,9 @@ export const ContactSection: React.FC = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full sm:w-auto px-7 py-3 rounded-2xl font-bold text-xs text-[#5C0702] bg-[#FFA175] hover:bg-[#ff8e5b] shadow-lg shadow-[#FFA175]/25 active:scale-98 transition-all cursor-pointer flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-3 rounded-2xl font-black text-xs text-[#2A0201] bg-[#FFA175] hover:bg-[#ff8e5b] shadow-lg shadow-[#FFA175]/30 active:scale-98 transition-all cursor-pointer flex items-center justify-center gap-2"
               >
-                {loading ? <div className="w-4 h-4 border-2 border-[#5C0702] border-t-transparent rounded-full animate-spin" /> : <Send className="w-4 h-4" />}
+                {loading ? <div className="w-4 h-4 border-2 border-[#2A0201] border-t-transparent rounded-full animate-spin" /> : <Send className="w-4 h-4" />}
                 <span>Send Message</span>
               </button>
             </form>
