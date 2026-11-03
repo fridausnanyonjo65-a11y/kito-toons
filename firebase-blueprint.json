@@ -1,0 +1,108 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128 },
+        "email": { "type": "string", "maxLength": 256 },
+        "displayName": { "type": "string", "maxLength": 120 },
+        "photoURL": { "type": "string", "maxLength": 1000 },
+        "bio": { "type": "string", "maxLength": 500 },
+        "favoriteCategory": { "type": "string", "maxLength": 50 },
+        "createdAt": { "type": "string", "maxLength": 64 },
+        "updatedAt": { "type": "string", "maxLength": 64 }
+      },
+      "required": ["uid", "email", "displayName"]
+    },
+    "Movie": {
+      "title": "Movie",
+      "description": "Animation movie details and streaming metadata",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "title": { "type": "string", "maxLength": 200 },
+        "description": { "type": "string", "maxLength": 2000 },
+        "category": { "type": "string", "maxLength": 60 },
+        "duration": { "type": "string", "maxLength": 30 },
+        "releaseYear": { "type": "number" },
+        "rating": { "type": "string", "maxLength": 10 },
+        "posterUrl": { "type": "string", "maxLength": 1000 },
+        "videoUrl": { "type": "string", "maxLength": 1000 },
+        "isFeatured": { "type": "boolean" },
+        "isPopular": { "type": "boolean" },
+        "isRecentlyAdded": { "type": "boolean" },
+        "director": { "type": "string", "maxLength": 120 }
+      },
+      "required": ["id", "title", "description", "category", "videoUrl"]
+    },
+    "Favorite": {
+      "title": "Favorite",
+      "description": "User bookmarked favorite movie",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "movieId": { "type": "string", "maxLength": 128 },
+        "movieTitle": { "type": "string", "maxLength": 200 },
+        "moviePoster": { "type": "string", "maxLength": 1000 },
+        "movieCategory": { "type": "string", "maxLength": 60 },
+        "addedAt": { "type": "string", "maxLength": 64 }
+      },
+      "required": ["id", "userId", "movieId", "movieTitle"]
+    },
+    "WatchHistory": {
+      "title": "WatchHistory",
+      "description": "User recently watched movies and playback progress",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "movieId": { "type": "string", "maxLength": 128 },
+        "movieTitle": { "type": "string", "maxLength": 200 },
+        "moviePoster": { "type": "string", "maxLength": 1000 },
+        "movieCategory": { "type": "string", "maxLength": 60 },
+        "watchedAt": { "type": "string", "maxLength": 64 },
+        "progressPercentage": { "type": "number" }
+      },
+      "required": ["id", "userId", "movieId", "movieTitle"]
+    },
+    "ContactMessage": {
+      "title": "ContactMessage",
+      "description": "Contact form submissions from users or visitors",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 120 },
+        "email": { "type": "string", "maxLength": 256 },
+        "subject": { "type": "string", "maxLength": 200 },
+        "message": { "type": "string", "maxLength": 2000 },
+        "createdAt": { "type": "string", "maxLength": 64 }
+      },
+      "required": ["name", "email", "message"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles"
+    },
+    "/users/{userId}/favorites/{favoriteId}": {
+      "schema": "Favorite",
+      "description": "User favorite movies"
+    },
+    "/users/{userId}/history/{historyId}": {
+      "schema": "WatchHistory",
+      "description": "User watch history"
+    },
+    "/movies/{movieId}": {
+      "schema": "Movie",
+      "description": "Animation movie catalog"
+    },
+    "/messages/{messageId}": {
+      "schema": "ContactMessage",
+      "description": "User contact inquiries"
+    }
+  }
+}

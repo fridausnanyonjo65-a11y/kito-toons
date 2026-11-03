@@ -1,0 +1,6 @@
+{
+  "name": "Kito's Toons - Animation Movies & Cartoons",
+  "description": "Your magical world of animation movies, cartoons, fun, and adventure! Watch and discover animated movies. Created by Kitooke.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

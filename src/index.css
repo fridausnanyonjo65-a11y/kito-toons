@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-butternut: #FFA175;
+    --color-cherry: #5C0702;
+    --color-cream: #FFF3E9;
+    --color-cherry-dark: #3E0401;
+    --color-cherry-light: #7E0A04;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #5C0702;
+    color: #FFF3E9;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom Cartoon Keyframes */
+@keyframes floatBubble {
+  0% {
+    transform: translateY(105vh) scale(0.8) translateX(0px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.65;
+  }
+  85% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(-20vh) scale(1.15) translateX(30px);
+    opacity: 0;
+  }
+}
+
+@keyframes driftCloudLeft {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(150vw);
+  }
+}
+
+@keyframes driftCloudRight {
+  0% {
+    transform: translateX(150vw);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+@keyframes gentleBounce {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes filmRoll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float-bubble {
+  animation: floatBubble 14s linear infinite;
+}
+
+.animate-drift-slow {
+  animation: driftCloudLeft 45s linear infinite;
+}
+
+.animate-drift-reverse {
+  animation: driftCloudRight 55s linear infinite;
+}
+
+.animate-gentle-bounce {
+  animation: gentleBounce 4s ease-in-out infinite;
+}
+
+.animate-star-twinkle {
+  animation: starTwinkle 3s ease-in-out infinite;
+}
+
+.animate-film-roll {
+  animation: filmRoll 24s linear infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3E0401;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFA175;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF8750;
+}
