@@ -193,9 +193,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="flex items-center gap-2 sm:gap-3">
               <button
                 onClick={() => onOpenAuth('signin')}
-                className="px-3 sm:px-4 py-2 text-xs font-bold text-[#FFF3E9] hover:text-[#FFA175] transition-colors cursor-pointer whitespace-nowrap"
+                className="flex items-center gap-1.5 px-3 sm:px-4 py-2 text-xs font-bold text-[#FFF3E9] hover:text-[#FFA175] transition-colors cursor-pointer whitespace-nowrap group"
               >
-                Sign In
+                <span className="text-sm group-hover:scale-125 transition-transform" title="SpongeBob will bring the form!">🧽</span>
+                <span>Sign In</span>
               </button>
               <button
                 onClick={() => onOpenAuth('signup')}
